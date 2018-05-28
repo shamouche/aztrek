@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/*========= Layout =========*/
+/*========== Typos ========*/
+/*========== Colors ========*/
+/*************** Puces **********************/
+/*************** Button ************************/
+/*=================================
+            BASE
+=================================*/
+html {
+  font-size: 75%;
+  font-family: "Montserrat", sans-serif;
+  color: #353233; }
+
+body {
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+h1,
+h2,
+h3 {
+  font-weight: normal; }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a:link, a:visited {
+  color: #a33822;
+  text-decoration: none; }
+a:focus, a:hover {
+  text-decoration: underline; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+/*=================================
+            HEADER
+=================================*/
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.18rem;
+  padding-top: 150px; }
+
+#page-header {
+  min-height: 575px;
+  background: url("../images/header-7.jpeg") no-repeat center center;
+  background-size: cover; }
+
+#mobile-header {
+  position: absolute;
+  top: 15px;
+  right: 15px; }
+  #mobile-header .burger {
+    font-size: 0; }
+    #mobile-header .burger .fa {
+      font-size: 3rem;
+      color: #ffffff; }
+
+#header-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px; }
+
+#site-title {
+  font-size: 0; }
+
+#main-nav {
+  display: none; }
+
+#main-nav {
+  display: none; }
+
+.search-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px; }
+  .search-form input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 0;
+    flex-grow: 1;
+    color: #353233;
+    padding: 1em 1.5rem;
+    transition: background 0.3s; }
+  .search-form button[type="submit"] {
+    margin-top: 0.5rem;
+    border: 0;
+    background-color: #db6015;
+    color: #ffffff;
+    padding: 1rem;
+    cursor: pointer; }
+    .search-form button[type="submit"]:hover {
+      background: rgba(163, 56, 34, 0.5); }
+
+/*================ Variables =================*/
+#concept {
+  padding: 30px 30px;
+  background-color: #f7f1ec; }
+  #concept .item {
+    margin: 45px;
+    padding: 0 75px; }
+    #concept .item:nth-of-type(1) {
+      background: url("../images/picto-decouvrez.png") no-repeat; }
+    #concept .item:nth-of-type(2) {
+      background: url("../images/picto-creez.png") no-repeat; }
+    #concept .item:nth-of-type(3) {
+      background: url("../../images/picto-voyagez.png") no-repeat; }
+    #concept .item h4 {
+      font-size: 1rem;
+      color: #353233;
+      margin: 0.5rem 0 0; }
+    #concept .item p {
+      font-size: 0.875rem;
+      color: #353233; }
+
+/*=================================
+            MAIN
+=================================*/
+/*===================== AVENTURES ==============*/
+#aventures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../images/picto-aventures.png") no-repeat center top;
+  padding-top: 300px; }
+  #aventures .news-article {
+    margin: 45px;
+    padding: 0 75px; }
+
+/*==slider====*/
+/*==============Communauté=============*/
+#communaute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../images/picto-communaute.png") no-repeat center top;
+  padding-top: 300px; }
+  #communaute .news-article {
+    margin: 45px;
+    padding: 0 75px; }
+
+#temoignages {
+  display: flex;
+  background-color: #f7f1ec; }
+  #temoignages img {
+    max-height: 220px;
+    max-width: 160px;
+    padding-left: 20px;
+    padding-top: 25px; }
+  #temoignages p {
+    padding-left: 30px; }
+  #temoignages h3 {
+    padding-left: 10px;
+    padding-top: 10px; }
+  #temoignages .news-article-2 p {
+    letter-spacing: 0.125rem;
+    padding: 5px; }
+
+/*===============Voyages===============*/
+#voyages {
+  display: block;
+  background-color: #f7f1ec; }
+
+.fa-heart {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: 0.3s; }
+
+.btn-heart:hover .fa-heart {
+  animation: beat 0.5s infinite alternate; }
+
+@keyframes beat {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(2); } }
+/*==============Events=============*/
+#events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../images/picto-events.png") no-repeat center top;
+  padding-top: 300px; }
+  #events .news-article {
+    margin: 45px;
+    padding: 0 75px; }
+
+/*=================================
+            FOOTER
+=================================*/
+#avantages {
+  background-color: #f7f1ec; }
+
+#footer-botton {
+  background-color: #db6015;
+  color: #ffffff; }
+  #footer-botton .footer-concept ul li a {
+    color: #ffffff;
+    align-items: center; }
+
+@media only screen and (min-width: 768px) {
+  #concept #concept-inner {
+    display: flex; }
+    #concept #concept-inner .item {
+      flex-basis: 33.33%;
+      display: flex;
+      flex-direction: column; }
+      #concept #concept-inner .item .more {
+        margin-top: auto; }
+
+  .search-form {
+    flex-direction: row;
+    justify-content: space-between; }
+    .search-form button[type="submit"] {
+      margin-top: 0; }
+
+  #aventures {
+    background-position: 50px top;
+    background-size: contain;
+    padding: 50px 0 0 200px; }
+
+  #communaute {
+    background-position: 50px top;
+    background-size: contain;
+    padding: 50px 0 0 200px; }
+
+  #events {
+    background-position: 50px top;
+    background-size: contain;
+    padding: 50px 0 0 200px; } }
+@media only screen and (min-width: 992px) {
+  #header-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 40px; }
+
+  #mobile-header {
+    display: none; }
+
+  .logo {
+    padding-bottom: 30px; }
+
+  .form {
+    margin-top: 30px;
+    padding-right: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+  #header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+
+  #main-nav {
+    display: block; }
+    #main-nav ul {
+      display: flex; }
+      #main-nav ul a {
+        display: block;
+        color: #fff;
+        padding: 1rem;
+        margin: 0 1rem; }
+        #main-nav ul a:focus, #main-nav ul a:hover {
+          color: #f09a66;
+          text-decoration: none; }
+
+  #slider {
+    background-color: #f7f1ec;
+    padding: 0 40px; } }
+
+/*# sourceMappingURL=styles.css.map */
