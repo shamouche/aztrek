@@ -11,47 +11,48 @@ try {
     echo "Erreur de la connexion à la BDD";
 }
 
-// Inclure automatiquement les fichiers PHP positionnés dans le dossier "entity"
 $entity_dir = __DIR__ . "/entity/";
 $files = scandir($entity_dir);
 foreach ($files as $file) {
-    if (is_file($entity_dir . $file) && pathinfo($entity_dir . $file, PATHINFO_EXTENSION) == "php") {
-        require_once $entity_dir . $file;
-    }
+   if (is_file($entity_dir . $file) && pathinfo($entity_dir . $file, PATHINFO_EXTENSION) == "php") {
+       require_once $entity_dir . $file;
+   }
 }
+
 
 function getAllEntity(string $table) {
-    /* @var $connection PDO */
-    global $connection;
+   /* @var $connection PDO */
+   global $connection;
+   
+   $query = "SELECT * FROM $table;";
 
-    $query = "SELECT * FROM $table;";
-
-    $stmt = $connection->prepare($query);
-    $stmt->execute();
-    
-    return $stmt->fetchAll();
+   $stmt = $connection->prepare($query);
+   $stmt->execute();
+   
+   return $stmt->fetchAll();
 }
 
+
 function getOneEntity(string $table, int $id) {
-    /* @var $connection PDO */
-    global $connection;
+   /* @var $connection PDO */
+   global $connection;
 
-    $query = "SELECT * FROM $table WHERE id = :id;";
+   $query = "SELECT * FROM $table WHERE id = :id;";
 
-    $stmt = $connection->prepare($query);
-    $stmt->bindParam(":id", $id);
-    $stmt->execute();
-    
-    return $stmt->fetch();
+   $stmt = $connection->prepare($query);
+   $stmt->bindParam(":id", $id);
+   $stmt->execute();
+   
+   return $stmt->fetch();
 }
 
 function deleteEntity(string $table, int $id) {
-    /* @var $connection PDO */
-    global $connection;
+   /* @var $connection PDO */
+   global $connection;
 
-    $query = "DELETE FROM $table WHERE id = :id;";
+   $query = "DELETE FROM $table WHERE id = :id;";
 
-    $stmt = $connection->prepare($query);
-    $stmt->bindParam(":id", $id);
-    $stmt->execute();
+   $stmt = $connection->prepare($query);
+   $stmt->bindParam(":id", $id);
+   $stmt->execute();
 }

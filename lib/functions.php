@@ -26,3 +26,5 @@ function getFooter() {
 function getMenu() {
     require_once 'layout/menu.php';
 }
+
+
