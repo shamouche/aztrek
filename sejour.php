@@ -19,16 +19,23 @@ getHeader($sejour["title"]);
 <p>Niveau de difficultés : <?php echo $sejour["niveau"]; ?>/5</p>
 <p>Categorie : <?php echo $sejour["category"]; ?></p>
 
-
-<?php foreach ($list_commerciaux as $commercial) : ?>
-    <li>
-        <img src="uploads/<?php echo $commercial["picture"]; ?>">
-        <a href="sejour.php?id=<?php echo $commercial["id"]; ?>">
-            <?php echo $commercial["firstname"]; ?>
+<h3>Commercial</h3>
+<il>
+    <?php foreach ($list_commerciaux as $commercial) : ?>
+        
+ <a href="sejour.php?id=<?php echo $commercial["id"]; ?>">
         </a>
     </li>
 <?php endforeach; ?>
-
+    
+    <img src="uploads/<?php echo $list_commerciaux["picture"]; ?>">
+    <p><?php echo $list_commerciaux["firstname"]; ?></p>
+    <p><?php echo $list_commerciaux["lastname"]; ?></p>
+    <p><?php echo $list_commerciaux["telephone"]; ?></p>
+ 
 
 <?php getFooter(); ?>
+
+    
+
 
