@@ -1,7 +1,6 @@
-<?php
-require_once '../../../model/database.php';
+<?php require_once '../../../model/database.php';
 
-$list_projects = getAllProjects();
+$list_country = getAllEntity("country");
 
 require_once '../../layout/header.php';
 ?>
@@ -23,16 +22,16 @@ require_once '../../layout/header.php';
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($list_projects as $project) : ?>
+        <?php foreach ($list_country as $country) : ?>
             <tr>
-                <td><?php echo $project["title"]; ?></td>
-                <td><?php echo $project["date_start"]; ?></td>
-                <?php $picture = (!empty($project["picture"])) ? "../../../uploads/" . $project["picture"] : "http://via.placeholder.com/150x150"; ?>
+                <td><?php echo $countryt["title"]; ?></td>
+                <td><?php echo $country["date_start"]; ?></td>
+                <?php $picture = (!empty($country["picture"])) ? "../../../uploads/" . $country["picture"] : "http://via.placeholder.com/150x150"; ?>
                 <td><img src="<?php echo $picture; ?>" class="img-thumbnail"></td>
-                <td><?php echo $project["category"]; ?></td>
+                <td><?php echo $country["category"]; ?></td>
                 <td>
-                    <a href="update.php?id=<?php echo $project["id"]; ?>" class="btn btn-secondary"><i class="fa fa-edit"></i></a>
-                    <a href="delete_query.php?id=<?php echo $project["id"]; ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    <a href="update.php?id=<?php echo $country["id"]; ?>" class="btn btn-secondary"><i class="fa fa-edit"></i></a>
+                    <a href="delete_query.php?id=<?php echo $country["id"]; ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
         <?php endforeach; ?>

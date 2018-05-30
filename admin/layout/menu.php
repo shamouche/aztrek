@@ -8,13 +8,13 @@
     <li class="nav-item">
         <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/users/">
             <i class="fa fa-users"></i>
-            Membres
+            Users
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/country/">
             <i class="fa fa-briefcase"></i>
-            Projets
+            Country
         </a>
     </li>
 </ul>
