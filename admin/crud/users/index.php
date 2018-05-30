@@ -1,7 +1,7 @@
 <?php
 require_once '../../../model/database.php';
 
-$list_users = getOneUser("users");
+$list_users = getAllEntity("user");
 
 require_once '../../layout/header.php';
 ?>
@@ -23,15 +23,15 @@ require_once '../../layout/header.php';
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($list_users as $users) : ?>
+        <?php foreach ($list_users as $user) : ?>
             <tr>
-                <td><?php echo $users["lastname"]; ?></td>
-                <td><?php echo $users["firstname"]; ?></td>
-                <?php $picture = (!empty($users["picture"])) ? "../../../uploads/" . $users["picture"] : "http://via.placeholder.com/150x150"; ?>
+                <td><?php echo $user["lastname"]; ?></td>
+                <td><?php echo $user["firstname"]; ?></td>
+                <?php $picture = (!empty($users["picture"])) ? "../../../uploads/" . $user["picture"] : "http://via.placeholder.com/150x150"; ?>
                 <td><img src="<?php echo $picture; ?>" class="img-thumbnail"></td>
                 <td>
-                    <a href="update.php?id=<?php echo $users["id"]; ?>" class="btn btn-secondary"><i class="fa fa-edit"></i></a>
-                    <a href="delete_query.php?id=<?php echo $users["id"]; ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    <a href="update.php?id=<?php echo $user["id"]; ?>" class="btn btn-secondary"><i class="fa fa-edit"></i></a>
+                    <a href="delete_query.php?id=<?php echo $user["id"]; ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
         <?php endforeach; ?>

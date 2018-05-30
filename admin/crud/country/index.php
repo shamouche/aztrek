@@ -24,11 +24,9 @@ require_once '../../layout/header.php';
     <tbody>
         <?php foreach ($list_country as $country) : ?>
             <tr>
-                <td><?php echo $countryt["title"]; ?></td>
-                <td><?php echo $country["date_start"]; ?></td>
+                <td><?php echo $country["name"]; ?></td>
                 <?php $picture = (!empty($country["picture"])) ? "../../../uploads/" . $country["picture"] : "http://via.placeholder.com/150x150"; ?>
                 <td><img src="<?php echo $picture; ?>" class="img-thumbnail"></td>
-                <td><?php echo $country["category"]; ?></td>
                 <td>
                     <a href="update.php?id=<?php echo $country["id"]; ?>" class="btn btn-secondary"><i class="fa fa-edit"></i></a>
                     <a href="delete_query.php?id=<?php echo $country["id"]; ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
