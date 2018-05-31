@@ -6,8 +6,9 @@
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/bootstrap/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/font-awesome/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables/media/css/jquery.dataTables.min.css"/>
-        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/select2/dist/css/select2.min.css"/>
+        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote.css"/>
+        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote-bs4.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/dashboard.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/admin.css"/>
     </head>
@@ -21,7 +22,7 @@
                 </li>
                 <li class="nav-item text-no-wrap">
                     <a class="nav-link" href="<?php echo SITE_URL; ?>"><i class="fa fa-external-link"></i> Front</a>
-                </li>
+                </li>x
             </ul>
         </nav>
 

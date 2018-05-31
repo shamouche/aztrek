@@ -15,10 +15,9 @@ require_once '../../layout/header.php';
 <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>Titre</th>
-            <th>Date de début</th>
+            <th>Nom</th>
+            <th>Prénom</th>
             <th>Photo</th>
-            <th>Categorie</th>
             <th>Actions</th>
         </tr>
     </thead>

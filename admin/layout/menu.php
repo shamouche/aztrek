@@ -17,4 +17,10 @@
             Country
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/sejour/">
+            <i class="fa fa-briefcase"></i>
+            Séjours
+        </a>
+    </li>
 </ul>

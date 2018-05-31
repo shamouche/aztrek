@@ -5,7 +5,7 @@ $list_country = getAllEntity("country");
 require_once '../../layout/header.php';
 ?>
 
-<h1>Gestion des projets</h1>
+<h1>Gestion des pays</h1>
 
 <a href="create.php" class="btn btn-primary"><i class="fa fa-plus"></i> Ajouter</a>
 
@@ -15,9 +15,7 @@ require_once '../../layout/header.php';
     <thead class="thead-dark">
         <tr>
             <th>Titre</th>
-            <th>Date de début</th>
             <th>Photo</th>
-            <th>Categorie</th>
             <th>Actions</th>
         </tr>
     </thead>
