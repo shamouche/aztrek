@@ -4,7 +4,7 @@ require_once '../../../model/database.php';
 $id = $_GET["id"];
 $sejour = getOneEntity("sejour", $id);
 
-$list_countries = getAllCountry();
+$list_countries = getAllEntity("country");
 $list_categories = getAllEntity("category");
 
 require_once '../../layout/header.php';
@@ -14,8 +14,8 @@ require_once '../../layout/header.php';
 
 <form action="update_query.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="pays">Pays</label>
-        <select id="pays" name="pays_id" class="form-control">
+        <label for="country">Pays</label>
+        <select id="country" name="country_id" class="form-control">
             <?php foreach ($list_countries as $country) : ?>
                 <?php $selected = ($country["id"] == $sejour["country_id"]) ? "selected" : ""; ?>
                 <option value="<?php echo $country["id"]; ?>" <?php echo $selected; ?>><?php echo $country["name"]; ?></option>
@@ -24,11 +24,11 @@ require_once '../../layout/header.php';
     </div>
     <div class="form-group">
         <label for="title">Titre</label>
-        <input type="text" id="title" name="titre" value="<?php echo $sejour["title"]; ?>" class="form-control">
+        <input type="text" id="title" name="title" value="<?php echo $sejour["title"]; ?>" class="form-control">
     </div>
      <div class="form-group">
         <label for="description">Description</label>
-        <input type="text" id="description" name="description" value="<?php echo $sejour["description"]; ?>" class="form-control">
+        <textarea id="description" name="description" value="<?php echo $sejour["description"]; ?>" class="form-control"></textarea>
     </div>
     <div class="form-group">
         <label for="picture">Photo</label>
@@ -57,9 +57,6 @@ require_once '../../layout/header.php';
         </select>
    <input type="hidden" name="id" value="<?php echo $category["id"]; ?>">
     <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Enregistrer</button>
-       </div>
-   
-
 </form>
 
 
